@@ -22,17 +22,17 @@ function App() {
   // TO GET PRODUCT ITEMS FOR MAIN PAGE
   useEffect(() => {
     // we pass url to our server page we need, then we return a promise(.then()) and catch the response from backend
-    Axios.get("http://localhost:5000/", { crossdomain: true }).then(
+    Axios.get("https://food-delivery-app-iamalinaaa.vercel.app/", { crossdomain: true }).then(
       (response) => {
         // to access the data : response.data and we add it to our state listOfProductItemsFromDB to keep here
         setListOfProductItemsFromDB(response.data);
-      }
+      } 
     );
   }, []);
 
   // TO GET COUPONS FOR COUPONS PAGE
   useEffect(() => {
-    Axios.get("http://localhost:5000/coupons", { crossdomain: true }).then(
+    Axios.get("https://food-delivery-app-iamalinaaa.vercel.app/coupons", { crossdomain: true }).then(
       (response) => {
         setlistOfCouponsFromDB(response.data);
       }
