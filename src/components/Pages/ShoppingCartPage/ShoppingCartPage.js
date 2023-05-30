@@ -58,7 +58,7 @@ function ShoppingCartPage(props) {
     ) {
       // if we have object with same names for each post (like {name:name,phone:phone}, we can send it just like {name, phone})
       // but we keep all data into one useState object, so we need to specify
-      Axios.post("http://localhost:5000/cart", {
+      Axios.post("https://food-delivery-app-iamalinaaa.vercel.app/cart", {
         userAddress: userInfoAndOrder.userAddress,
         userEmail: userInfoAndOrder.userEmail,
         userPhone: userInfoAndOrder.userPhone,
