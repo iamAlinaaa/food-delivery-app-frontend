@@ -14,7 +14,7 @@ function FindOrder(props) {
     // for page not to reload
     event.preventDefault();
     // check if user info and order are not empty
-    if (userInfo.userEmail.length !== 0 && userInfo.userPhone.length !== 0) {
+    if (userInfo.userEmail.length !== 0) {
       // if we have object with same names for each post (like {name:name,phone:phone}, we can send it just like {name, phone})
       // but we keep all data into one useState object, so we need to specify
       Axios.post("https://food-delivery-app-iamalinaaa.vercel.app/history", {
