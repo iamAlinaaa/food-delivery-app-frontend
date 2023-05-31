@@ -22,7 +22,7 @@ function App() {
   // TO GET PRODUCT ITEMS FOR MAIN PAGE
   useEffect(() => {
     // we pass url to our server page we need, then we return a promise(.then()) and catch the response from backend
-    Axios.get("https://food-delivery-app-git-main-iamalinaaa.vercel.app/", { crossdomain: true }).then(
+    Axios.get("https://food-delivery-app-nine-zeta.vercel.app/", { crossdomain: true }).then(
       (response) => {
         // to access the data : response.data and we add it to our state listOfProductItemsFromDB to keep here
         setListOfProductItemsFromDB(response.data);
@@ -32,7 +32,7 @@ function App() {
 
   // TO GET COUPONS FOR COUPONS PAGE
   useEffect(() => {
-    Axios.get("https://food-delivery-app-git-main-iamalinaaa.vercel.app/coupons", { crossdomain: true }).then(
+    Axios.get("https://food-delivery-app-nine-zeta.vercel.app/coupons", { crossdomain: true }).then(
       (response) => {
         setlistOfCouponsFromDB(response.data);
       }
