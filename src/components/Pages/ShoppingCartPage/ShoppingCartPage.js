@@ -58,7 +58,7 @@ function ShoppingCartPage(props) {
     ) {
       // if we have object with same names for each post (like {name:name,phone:phone}, we can send it just like {name, phone})
       // but we keep all data into one useState object, so we need to specify
-      Axios.post("https://food-delivery-app-iamalinaaa.vercel.app/cart", {
+      Axios.post("http://localhost:5000/cart", {
         userAddress: userInfoAndOrder.userAddress,
         userEmail: userInfoAndOrder.userEmail,
         userPhone: userInfoAndOrder.userPhone,
@@ -66,6 +66,10 @@ function ShoppingCartPage(props) {
         userOrder: userInfoAndOrder.userOrder,
         totalPrice: userInfoAndOrder.totalPrice,
       }).then((response) => {
+        // clean cart and hide submit button
+        props.handleCartCleaner();
+        setUserInfoAndOrder({ totalPrice: "" });
+        window.location.reload();
         alert("Your Order has been created!");
       });
     } else {
