@@ -32,9 +32,7 @@ function UserInformation(props) {
    //   when user inputs an address
   function userAddressHandler(event) {
     setUserAddress(event.target.value);
-    setUserInfo((prevData) => {
-      return {...prevData, userAddress: event.target.value }
-    })
+    
   }
 
   //   when button is clicked user searches for address on map
