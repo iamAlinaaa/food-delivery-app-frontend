@@ -67,7 +67,9 @@ function submitUserOrderAndInfo(event) {
         totalPrice: userInfoAndOrder.totalPrice,
       }).then((response) => {
         // clean cart and hide submit button
-
+        props.handleCartCleaner();
+        setUserInfoAndOrder({ totalPrice: "" });
+        window.location.reload();
         alert("Your Order has been created!");
       });
     } else {
