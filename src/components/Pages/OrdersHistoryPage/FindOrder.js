@@ -16,7 +16,7 @@ function FindOrder(props) {
     if (userInfo.userEmail.length !== 0) {
       // if we have object with same names for each post (like {name:name,phone:phone}, we can send it just like {name, phone})
       // but we keep all data into one useState object, so we need to specify
-      Axios.post("https://food-delivery-app-iamalinaaa.vercel.app/history", {
+      Axios.post("https://food-delivery-app-fullstack-git-main-iamalinaaa.vercel.app/history", {
         userEmail: userInfo.userEmail,
       }).then((response) => {
         console.log("response from server", response.data);
