@@ -24,7 +24,7 @@ function ListOfOrders(props) {
                   alignItems: "center",
                 }}
               >
-                <h1>Total Price: ${orderInfo.totalPrice}</h1>
+                <h1 style={{margin: "0"}}>Total Price: ${orderInfo.totalPrice}</h1>
               </div>
               <div
                 key={orderInfo._id}
