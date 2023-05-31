@@ -58,7 +58,7 @@ function submitUserOrderAndInfo(event) {
     ) {
       // if we have object with same names for each post (like {name:name,phone:phone}, we can send it just like {name, phone})
       // but we keep all data into one useState object, so we need to specify
-      Axios.post(https://food-delivery-app-git-main-iamalinaaa.vercel.app/cart", {
+      Axios.post("https://food-delivery-app-nine-zeta.vercel.app/cart", {
         userAddress: userInfoAndOrder.userAddress,
         userEmail: userInfoAndOrder.userEmail,
         userPhone: userInfoAndOrder.userPhone,
