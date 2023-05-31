@@ -66,21 +66,6 @@ function FindOrder(props) {
               value={userInfo.userEmail}
             />
           </div>
-          <div className={classes.userInfo}>
-            <label className={classes.infoTitles} htmlFor="userPhone">
-              Phone:
-            </label>
-            <input
-              className={classes.formControl}
-              placeholder="Enter your phone number"
-              id="userPhone"
-              type="tel"
-              name="userPhone"
-              autoComplete="off"
-              onChange={(e) => userInfoHandler(e)}
-              value={userInfo.userPhone}
-            />
-          </div>
           <button type="submit" className={classes.userSubmitButton}>
             Find My Orders
           </button>
