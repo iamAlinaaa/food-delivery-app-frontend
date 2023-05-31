@@ -70,7 +70,7 @@ function ShoppingCartPage(props) {
         props.handleCartCleaner();
         setUserInfoAndOrder({ totalPrice: "" });
         window.location.reload();
-        alert("Your Order has been created!");
+       
       });
     } else {
       alert(
