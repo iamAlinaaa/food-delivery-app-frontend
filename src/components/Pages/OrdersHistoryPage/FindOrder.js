@@ -7,7 +7,6 @@ import CardContainer from "../../UI/Containers/CardContainer";
 function FindOrder(props) {
   const [userInfo, setUserInfo] = useState({
     userEmail: "",
-    userPhone: "",
   });
 
   function submitUserInfoButton(event) {
@@ -19,7 +18,6 @@ function FindOrder(props) {
       // but we keep all data into one useState object, so we need to specify
       Axios.post("https://food-delivery-app-iamalinaaa.vercel.app/history", {
         userEmail: userInfo.userEmail,
-        userPhone: userInfo.userPhone,
       }).then((response) => {
         console.log("response from server", response.data);
         props.userInfoHandlerMain(response.data)
