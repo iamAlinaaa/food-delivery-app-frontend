@@ -78,6 +78,7 @@ function App() {
   function handleCartCleaner() {
     //  just set cart items array to an empty array
     setCartItems([]);
+    window.location.reload();
   }
   // ////////////////////////////////////////////////////////////////
 
