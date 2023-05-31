@@ -27,17 +27,22 @@ function CartItems(props) {
         totalPrice: totalPrice.toFixed(2),
       });
     }
-  }, [props.cartItems]);
+    }, [props.cartItems, totalPrice]);
 
   useEffect(() => {
     props.userOrderHandler(userOrderAndPrice);
   }, [userOrderAndPrice]);
 
-  useEffect(() => {
+    useEffect(() => {
     if (isDiscountUsed) {
       let newPrice = totalPrice - (totalPrice * currentDiscountPercent) / 100;
       setDiscountPrice(newPrice);
+      setUserOrderAndPrice({
+        userOrder: props.cartItems,
+        totalPrice:`${newPrice.toFixed(2)} with discount`,
+      });
     }
+    
   }, [isDiscountUsed, totalPrice]);
 
   // ////////////////////////////////////////// FUNCTIONS
