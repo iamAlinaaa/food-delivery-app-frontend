@@ -43,7 +43,7 @@ function ShoppingCartPage(props) {
 
   // ////////////////////////////////////// SUBMITTING TO BACKEND when button submit is clicked
 
-  function submitUserOrderAndInfo(event) {
+function submitUserOrderAndInfo(event) {
     // for page not to reload
     event.preventDefault();
     // check if user info and order are not empty
@@ -67,10 +67,8 @@ function ShoppingCartPage(props) {
         totalPrice: userInfoAndOrder.totalPrice,
       }).then((response) => {
         // clean cart and hide submit button
-        props.handleCartCleaner();
-        setUserInfoAndOrder({ totalPrice: "" });
-        window.location.reload();
-       
+
+        alert("Your Order has been created!");
       });
     } else {
       alert(
